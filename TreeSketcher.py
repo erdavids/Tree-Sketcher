@@ -4,13 +4,14 @@ from PIL import Image, ImageDraw
 
 # Used to map the generation of the tree
 class Node(object):
-	def __init__(self, sketcher, position, parent):
+	def __init__(self, sketcher, position):
 		self.sketcher = sketcher
 		self.x, self.y = position
-		self.parent = parent
+		self.parent = []
+		self.grandparents = []
 
 
-# Will be used to render the tree using the 'nodeList' collection
+		# Will be used to render the tree using the 'nodeList' collection
 class Sketcher(object):
 	def __init__(self, image):
 		self.image = image
